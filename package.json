@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run-all-headless": "npx playwright test",
+    "run-all-headless": "npx playwright test --trace on",
+    "run-all-headed": "npx playwright test --trace on",
+    "run-all-ui": "npx playwright test --ui",
     "run-title-headed": "npx playwright test tests/1.orangeHRM_Title.spec.js --headed",
     "run-title-url": "npx playwright test tests/1.orangeHRM_Title.spec.js tests/2.orangeHRM_URL.spec.js --headed",
     "run-project-chromium-headless": "npx playwright test 1.orangeHRM_Title.spec.js -project=chromium",
     "run-project-chromium-headed": "npx playwright test 1.orangeHRM_Title.spec.js --headed --project=chromium",
+    "run-project-firefox-headed": "npx playwright test 7.orangeHRM_filter.spec.js --headed --project=firefox",
+    "run-project-firefox-traceviewer": "npx playwright test 7.orangeHRM_filter.spec.js --headed --project=firefox --trace on",
     "run-test-word": "npx playwright test 1.orangeHRM_Title.spec.js --headed",
     "show-report": "npx playwright show-report",
     "run-test-vTitle": "npx playwright test -g \"Validate Orange HRM Title\"",
@@ -16,7 +20,9 @@
     "run-codegen-blank": "npx playwright codegen",
     "run-codegen-orangehrm": "npx playwright codegen https://opensource-demo.orangehrmlive.com/",
     "run-orangehrm-codegen": "npx playwright test orangeHRM_codegen.spec.js --headed",
-    "open-playwright-codegen": "npx playwright codegen -o ./tests/4.playwright_codegen.spec.js"
+    "open-playwright-codegen": "npx playwright codegen -o ./tests/4.playwright_codegen.spec.js",
+    "run-traceviewer": "npx playwright test 7.orangeHRM_filter.spec.js --headed --project=firefox --trace on",
+    "run-trace": "npx playwright test 8.orangeHRM_traceViewer.spec.js --headed --project=firefox"
   },
   "keywords": [],
   "author": "",
