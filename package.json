@@ -15,7 +15,8 @@
     "run-parallel": "npx playwright test 1.orangeHRM_Title.spec.js --headed --workers 3",
     "run-codegen-blank": "npx playwright codegen",
     "run-codegen-orangehrm": "npx playwright codegen https://opensource-demo.orangehrmlive.com/",
-    "run-orangehrm-codegen": "npx playwright test orangeHRM_codegen.spec.js --headed"
+    "run-orangehrm-codegen": "npx playwright test orangeHRM_codegen.spec.js --headed",
+    "open-playwright-codegen": "npx playwright codegen -o ./tests/4.playwright_codegen.spec.js"
   },
   "keywords": [],
   "author": "",
