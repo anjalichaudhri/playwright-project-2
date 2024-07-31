@@ -1,0 +1,27 @@
+{
+  "name": "playwright-project-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run-all-headless": "npx playwright test",
+    "run-title-headed": "npx playwright test tests/1.orangeHRM_Title.spec.js --headed",
+    "run-title-url": "npx playwright test tests/1.orangeHRM_Title.spec.js tests/2.orangeHRM_URL.spec.js --headed",
+    "run-project-chromium-headless": "npx playwright test 1.orangeHRM_Title.spec.js -project=chromium",
+    "run-project-chromium-headed": "npx playwright test 1.orangeHRM_Title.spec.js --headed --project=chromium",
+    "run-test-word": "npx playwright test 1.orangeHRM_Title.spec.js --headed",
+    "show-report": "npx playwright show-report",
+    "run-test-vTitle": "npx playwright test -g \"Validate Orange HRM Title\"",
+    "run-parallel": "npx playwright test 1.orangeHRM_Title.spec.js --headed --workers 3",
+    "run-codegen-blank": "npx playwright codegen",
+    "run-codegen-orangehrm": "npx playwright codegen https://opensource-demo.orangehrmlive.com/",
+    "run-orangehrm-codegen": "npx playwright test orangeHRM_codegen.spec.js --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.45.3",
+    "@types/node": "^22.0.0"
+  }
+}
